@@ -12,7 +12,7 @@ Terraform s3 state bucket has to be already created.
 - `AWS_ACCESS_KEY_ID` - service user key id
 - `AWS_SECRET_ACCESS_KEY` - service user access key
 
-## Continuous Integration
+## Continuous Integration (currently not working)
 
 After Push or PR to main branch GitHub Action will run [Terraform CI](./.github/workflows/ci.yml) with Linting, Init, Validate and Plan.
 
