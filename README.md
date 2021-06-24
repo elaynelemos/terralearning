@@ -2,6 +2,13 @@
 
 This is an unstable _Terraform_ infrastructure. Used only to keep track of what I'm learning. Structure based on cookiecutter [infra template](https://github.com/elaynelemos/terraform-template).
 
+## Modules structure
+
+| #   | Name | Description | Path | Based on |
+| :-- | :--- | :---------- | :--- | :------- |
+| 0. | Hello World | Creating a starting EC2 instance | [hello-world](./hello-world) | [An Introduction to Terraform](https://blog.gruntwork.io/an-introduction-to-terraform-f17df9c6d180) |
+| 1. | Autoscaling Group Example | Setting up the basics of an ASG | [asg-example](./asg-example) | [An Introduction to Terraform](https://blog.gruntwork.io/an-introduction-to-terraform-f17df9c6d180) |
+
 ## CI/CD Requirements
 
 Terraform s3 state bucket has to be already created.
