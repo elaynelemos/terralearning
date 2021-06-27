@@ -8,6 +8,9 @@ This is an unstable _Terraform_ infrastructure. Used only to keep track of what 
 | :-- | :--- | :---------- | :--- | :------- |
 | 0. | Hello World | Creating a starting EC2 instance | [hello-world](./hello-world) | [An Introduction to Terraform](https://blog.gruntwork.io/an-introduction-to-terraform-f17df9c6d180) |
 | 1. | Autoscaling Group Example | Setting up the basics of an ASG | [asg-example](./asg-example) | [An Introduction to Terraform](https://blog.gruntwork.io/an-introduction-to-terraform-f17df9c6d180) |
+| 2. | Stage Storage | Managing remote state storages and environments | [state-storage](./state-storage) | [How to manage Terraform state](https://blog.gruntwork.io/how-to-manage-terraform-state-28f5697e68fa) |
+| 2.1. | Workspace Isolation | Fast testing small infrastructure changes through environment workspaces | [state-storage/workspace-isolation](./state-storage/workspace-isolation) | [How to manage Terraform state](https://blog.gruntwork.io/how-to-manage-terraform-state-28f5697e68fa) |
+| 2.2. | File Layout Isolation | Separating environments through file layout convention and authentication | [state-storage/file-layout-isolation](./state-storage/file-layout-isolation) | [How to manage Terraform state](https://blog.gruntwork.io/how-to-manage-terraform-state-28f5697e68fa) |
 
 ### CI/CD Requirements
 
