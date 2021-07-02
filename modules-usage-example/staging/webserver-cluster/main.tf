@@ -16,7 +16,7 @@ provider "aws" {
 module "webserver_cluster" {
   source = "github.com/elaynelemos/terralearning-modules//services//webserver-cluster?ref=v0.0.2"
 
-  cluster_name = "webservers-module-ex-staging"
+  cluster_name  = "webservers-module-ex-staging"
   instance_type = "t2.micro"
   min_size      = 2
   max_size      = 2

@@ -33,7 +33,7 @@ resource "aws_launch_configuration" "example" {
   image_id        = var.ami_code
   instance_type   = "t2.micro"
   security_groups = [aws_security_group.instance.id]
-  user_data = <<-EOF
+  user_data       = <<-EOF
               #!/bin/bash
               echo "Hello, World!" > index.html
               nohup busybox httpd -f -p ${var.server_port} &
@@ -50,7 +50,7 @@ resource "aws_autoscaling_group" "exampe" {
   min_size = 2
   max_size = 4
 
-  load_balancers = [ aws_elb.example.name ]
+  load_balancers    = [aws_elb.example.name]
   health_check_type = "ELB"
 
   tag {
@@ -71,16 +71,16 @@ resource "aws_security_group" "elb" {
   }
 
   ingress {
-    from_port = 80
-    to_port = 80
-    protocol = "tcp"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
     cidr_blocks = local.any_host
   }
 }
 
 resource "aws_elb" "example" {
   name               = var.name
-  security_groups = [aws_security_group.elb.id]
+  security_groups    = [aws_security_group.elb.id]
   availability_zones = data.aws_availability_zones.all.names
 
   health_check {
@@ -92,9 +92,9 @@ resource "aws_elb" "example" {
   }
 
   listener {
-    lb_port = 80
-    lb_protocol = "http"
-    instance_port = var.server_port
+    lb_port           = 80
+    lb_protocol       = "http"
+    instance_port     = var.server_port
     instance_protocol = "http"
   }
 }

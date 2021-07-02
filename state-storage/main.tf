@@ -23,7 +23,7 @@ provider "aws" {
 }
 
 locals {
-  bucket_name   = "elemos-${var.name}"
+  bucket_name = "elemos-${var.name}"
 }
 
 resource "aws_s3_bucket" "terraform_state" {
